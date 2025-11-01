@@ -1,0 +1,20 @@
+{
+    "name": "model-viewer-basic",
+    "version": "1.0.0",
+    "description": "A tool for compiling and transforming Three.js scenes",
+    "exports": {
+        ".": "./lib/viewer.js"
+    },
+    "type": "module",
+    "types": "./lib/viewer.d.ts",
+    "files": [
+        "lib/",
+        "README.md",
+        "LICENSE",
+        "package.json"
+    ],
+    "dependencies": {
+        "@gltf-transform/core": "^4.2.0",
+        "three": "^0.178.0"
+    }
+}
