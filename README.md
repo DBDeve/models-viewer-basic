@@ -1,4 +1,4 @@
-# three-compilator V1
+# models-viewer-basic V1
 
 ## how testing and developer the library
 1. git clone https://github.com/DBDeve/three-compilator.git#DEV
