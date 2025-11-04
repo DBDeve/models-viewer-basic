@@ -15,6 +15,6 @@
     ],
     "dependencies": {
         "@gltf-transform/core": "^4.2.0",
-        "three": "^0.178.0"
+        "three": "^0.181.0"
     }
 }
