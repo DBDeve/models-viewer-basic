@@ -1,0 +1,42 @@
+{
+  "name": "models-viewer-basic",
+  "version": "1.0.0",
+  "description": "A tool for compiling and transforming Three.js scenes",
+  "main": "./lib/viewer.js",
+  "exports": {
+    ".": "./lib/viewer.js"
+  },
+  "type": "module",
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "keywords": [
+    "three.js",
+    "viewer",
+    "3d",
+    "gltf",
+    "glb",
+    "obj",
+    "stl",
+    "ply",
+    "dae",
+    "hdri",
+    "model"
+  ],
+  "author": "Dario Bertonati <dario.bertonatilavoro@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DBDeve/models-viewer-basic"
+  },
+  "homepage": "https://github.com/DBDeve/models-viewer-basic#readme",
+  "dependencies": {
+    "three": "^0.181.0"
+  }
+}
