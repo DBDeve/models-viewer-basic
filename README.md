@@ -35,29 +35,25 @@ window.loadModel =async function () {
 	let config = {
 		"scene": {
 			"model": {"filePath": `${basePath}/file_model_name`},
-			//"noModel":{"Message":"message", "defaultPath":`${basePath}/file_model_name_default`},
 			"environment": {"hdrFilePath": `${basePath}/file_hdri_name`}
 		},
 		"renderer":{
 			"canvas": {
 				"insertIn": "canvasContainer",
 		    },
-			"RenderSize": {
-				"mobile": { "width": 0 , "height": 0},
-				"tablet":{"width": 0 , "height": 0},
-				"computer": { "width": 0, "height": 0}
+			"Size": {
+				"modality":"fullScreen",
 			},
 		},
 		"camera":{
 			"basic": {
 				"angle": { "x": 3.7, "y": 1.5},
-				"distance": { "initial": 1.7, "min": 2, "max": 4 },
-				"position":{"x":0,"y":0,"z":0} 
+				"distance": 1.7,
 			},
 			"controls": {
 				"rotate": { "vertical":{"min":0,"max":360}, "orizontal":{"min":-Infinity,"max":Infinity}},
-				"zoom": {},
-				"pan":{},
+				"zoom": {"min": 2, "max": 4 },
+				"pan":true,
 				"effect":{
 					"damping":{ "factor": 0.05 }
 				}
