@@ -1,6 +1,6 @@
 {
   "name": "models-viewer-basic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool for compiling and transforming Three.js scenes, camera and renderer",
   "main": "./lib/viewer.js",
   "exports": {
