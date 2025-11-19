@@ -18,11 +18,15 @@
 3. select javascript
 4. cd project-name
 5. npm install models-viewer-basic
-6. add this tag to index.html file: 
+
+### in Vanilla
+
+add this tag to index.html file: 
 ```
 <div id="canvasContainer"></div>
 ```
-7. add this code for default configuration
+
+add this code for default configuration
 ```
 import { viewer } from 'models-viewer-basic'; 
 
@@ -68,4 +72,66 @@ window.loadModel =async function () {
 }
 
 window.addEventListener('DOMContentLoaded', loadModel);
+```
+
+### in React
+
+insert in Main.jsx
+```
+createRoot(document.getElementById('root')).render(<App />)
+```
+
+insert in App.jsx
+```
+import { useState, useEffect } from "react";
+import { viewer } from 'models-viewer-basic'
+
+function App() {
+
+  const [config, setConfig] = useState({
+		"scene": {
+			"model": {"filePath": `/fbx/doom2099.fbx`},
+			"environment": `/art_studio_1k.hdri`
+		},
+		"renderer":{
+			"canvas": {
+				"insertIn": "canvasContainer",
+		  },
+			"Size": {
+				"modality":"fullScreen",
+			},
+		},
+		"camera":{
+			"basic": {
+				"angle": { "x": 3.7, "y": 1.5},
+				"distance": 1.7,
+			},
+			"controls": {
+				"rotate": { "vertical":{"min":0,"max":360}, "orizontal":{"min":-Infinity,"max":Infinity}},
+				"zoom": {"min": 2, "max": 4 },
+				"pan":true,
+				"effect":{
+					"damping":{ "factor": 0.05 }
+				}
+			},
+		},
+	})
+
+  useEffect(() => {
+    const init = async () => {
+      const instance = await viewer.createInstance(config);
+    };
+    init();
+  }, []);
+
+  return (
+    <>
+      <div>
+        <div id="canvasContainer"></div>
+      </div>
+    </>
+  )
+}
+
+export default App
 ```
