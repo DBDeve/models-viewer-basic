@@ -35,7 +35,7 @@ window.loadModel =async function () {
 	let config = {
 		"scene": {
 			"model": {"filePath": `${basePath}/file_model_name`},
-			"environment": {"hdrFilePath": `${basePath}/file_hdri_name`}
+			"environment": `${basePath}/file_hdri_name`
 		},
 		"renderer":{
 			"canvas": {
